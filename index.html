@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <section class="side-left">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <section class="side-right">
+        <div class="card-head">
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+        <div class="card">
+          <form action="">
+            <div class="first-name">
+              <input
+                class="input"
+                type="text"
+                id="first-name"
+                placeholder="First Name"
+              />
+              <div class="error-icon-fname">
+                <img src="./images/icon-error.svg" alt="" aria-hidden="true" />
+              </div>
+              <label class="fname" for="first-name"
+                >First Name cannot be empty</label
+              >
+            </div>
+
+            <div class="last-name">
+              <input
+                class="input"
+                type="text"
+                id="last-name"
+                placeholder="Last Name"
+              />
+              <div class="error-icon-lname">
+                <img src="./images/icon-error.svg" alt="" aria-hidden="true" />
+              </div>
+              <label class="lname" for="last-name"
+                >Last Name cannot be empty</label
+              >
+            </div>
+
+            <div class="address">
+              <input
+                class="input"
+                type="email"
+                id="address"
+                placeholder="Email Address"
+              />
+              <div class="error-icon-adress">
+                <img src="./images/icon-error.svg" alt="" aria-hidden="true" />
+              </div>
+              <label for="adress" class="empty-email"
+                >Email Address cannot be empty</label
+              >
+              <label for="adress" class="wrong-email"
+                >Looks like this is not an email</label
+              >
+            </div>
+
+            <div class="password">
+              <input
+                class="input"
+                type="password"
+                id="password"
+                placeholder="Password"
+              />
+              <div class="error-icon-pass">
+                <img src="./images/icon-error.svg" alt="" aria-hidden="true" />
+              </div>
+              <label class="pass" for="password"
+                >Password cannot be empty</label
+              >
+            </div>
+            <button>CLAIM YOUR FREE TRIAL</button>
+          </form>
+          <p>
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Yahya Ahmed</a>.
+      </p>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

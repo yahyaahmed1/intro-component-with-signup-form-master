@@ -1,0 +1,189 @@
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  background-image: url(./images/bg-intro-desktop.png);
+  background-color: var(--red);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 0 50px;
+}
+section.side-left {
+  color: var(--white);
+  padding: 0 50px 0 100px;
+}
+.side-left h1 {
+  font-size: 2.5em;
+  line-height: 1;
+}
+.side-left p {
+  max-width: 650px;
+  margin: auto;
+}
+section.side-right {
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  max-height: 590px;
+  /* padding: 0 50px 0 0; */
+  justify-content: space-between;
+}
+.card-head {
+  background-color: var(--blue);
+  width: -webkit-fill-available;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 7px #0000002e;
+}
+.card-head p span {
+  font-weight: 700;
+}
+.card {
+  padding: 35px;
+  background-color: var(--white);
+  text-align: right;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 7px #0000002e;
+}
+.card > p {
+  font-size: 10px;
+  text-align: center;
+  color: var(--grayish-blue);
+  padding: 0 30px;
+}
+.card > p span {
+  color: var(--red);
+  cursor: pointer;
+}
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+input.input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid #c7c7c7;
+  font-family: var(--font-poppins);
+  text-indent: 15px;
+  padding-right: 42px;
+  box-sizing: border-box;
+}
+input:focus {
+  outline: 1px solid var(--blue);
+  caret-color: var(--blue);
+}
+label {
+  display: none;
+  font-size: 12px;
+  color: var(--red);
+  margin-top: 5px;
+}
+form div div {
+  visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  top: 8px;
+  right: 15px;
+  margin: 0;
+  animation: shake 1s ease-in-out infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(4px, 0);
+  }
+  12% {
+    transform: translate(0, 0);
+  }
+  14% {
+    transform: translate(-4px, 0);
+  }
+  16% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+button {
+  border: none;
+  width: 100%;
+  height: 40px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--font-poppins);
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0 1px #4caf50;
+  font-weight: 500;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(154deg 85% 60%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url(./images/bg-intro-mobile.png);
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    display: grid;
+    padding: 0 20px;
+    gap: 100px;
+  }
+  section.side-left {
+    padding: 0 25px;
+    text-align: center;
+  }
+  section.side-right {
+    margin-bottom: 25px;
+  }
+  .card {
+    max-width: inherit;
+    padding: 25px;
+    width: fit-content;
+  }
+}
